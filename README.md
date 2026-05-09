@@ -366,41 +366,41 @@ Marca cada punto antes de entregar:
 
 ### Ejecucion
 
-- [ ] Abri el proyecto en VS Code.
-- [ ] Ejecute el proyecto con Live Server.
-- [ ] La pagina carga correctamente.
-- [ ] La consola no muestra errores criticos al iniciar.
+- [X] Abri el proyecto en VS Code.
+- [X] Ejecute el proyecto con Live Server.
+- [X] La pagina carga correctamente.
+- [X] La consola no muestra errores criticos al iniciar.
 
 ### Funcionalidad
 
-- [ ] Cargue datos de prueba.
-- [ ] Registre una actividad valida.
-- [ ] Los datos aparecen en la tabla.
-- [ ] El dashboard se actualiza.
-- [ ] El grafico se actualiza.
-- [ ] Los datos permanecen despues de recargar la pagina.
+- [X] Cargue datos de prueba.
+- [X] Registre una actividad valida.
+- [X] Los datos aparecen en la tabla.
+- [X] El dashboard se actualiza.
+- [X] El grafico se actualiza.
+- [X] Los datos permanecen despues de recargar la pagina.
 
 ### Validaciones
 
-- [ ] Probe campos vacios.
-- [ ] Probe cantidad cero o negativa.
-- [ ] Probe fecha futura.
-- [ ] Probe responsable con menos de 3 caracteres.
-- [ ] Probe combinaciones incorrectas como leche en kilos o gasto en litros.
+- [X] Probe campos vacios.
+- [X] Probe cantidad cero o negativa.
+- [X] Probe fecha futura.
+- [X] Probe responsable con menos de 3 caracteres.
+- [X] Probe combinaciones incorrectas como leche en kilos o gasto en litros.
 
 ### Depuracion
 
-- [ ] Use la consola del navegador.
-- [ ] Use el inspector de elementos.
-- [ ] Use el depurador con al menos un breakpoint.
-- [ ] Active el error controlado.
-- [ ] Corrigi el error controlado.
+- [X] Use la consola del navegador.
+- [X] Use el inspector de elementos.
+- [X] Use el depurador con al menos un breakpoint.
+- [X] Active el error controlado.
+- [X] Corrigi el error controlado.
 
 ### Entrega
 
-- [ ] Guarde capturas en la carpeta `evidencias`.
-- [ ] Realice una mejora pequena al proyecto.
-- [ ] Subi el proyecto a GitHub o lo comprimi para Moodle.
+- [X] Guarde capturas en la carpeta `evidencias`.
+- [X] Realice una mejora pequena al proyecto.
+- [X] Subi el proyecto a GitHub o lo comprimi para Moodle.
 
 ---
 
@@ -423,12 +423,18 @@ Marca cada punto antes de entregar:
 Responde brevemente:
 
 1. Que error encontraste y como lo corregiste?
+ Encontré un error provocado por una función inexistente en el archivo debug-panel.js.
+ Lo corregí comentando la línea que llamaba la función inexistente para evitar el error en consola.
 2. Para que te sirvio la consola?
+La consola me sirvió para observar mensajes del sistema, validar datos, revisar errores y comprobar que las funciones del proyecto trabajaban correctamente.
 3. Que revisaste con el inspector?
+Revisé la estructura HTML, los estilos CSS, botones, formularios y elementos visuales de la aplicación.
 4. Que variable observaste con el depurador?
+Observé variables como formData, quantity y errors dentro de la función de validación.
 5. Que mejora agregaste al proyecto?
+Implementé una mejora de interfaz avanzada con efectos de iluminación dinámica (Glow IA) y espejo. Usé variables CSS para que los cuadros y los destellos visuales se adapten solos al Modo Oscuro, logrando que el sistema se vea mucho más profesional y tecnológico sin importar el tema que se elija.
 6. Como podria usarse este sistema en una finca, colegio o comunidad rural?
-
+Este sistema sirve para digitalizar procesos clave. En una finca o comunidad, permite elegir entre opciones como producción de leche, cosecha de maíz, gastos, inventario o mantenimiento para llevar un control exacto de lo que se hace día a día. Ayuda a dejar de usar papel y permite ver los datos organizados al instante para tomar mejores decisiones.
 ---
 
 ## 20. Recomendacion final

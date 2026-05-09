@@ -22,8 +22,7 @@ function validateActivity(formData) {
   if (!type) errors.activityType = "Seleccione un tipo de actividad.";
   if (name.length < 3) errors.activityName = "Escriba un nombre de mínimo 3 caracteres.";
 
-  // Reto docente opcional: antes de entregar, pida al estudiante probar cantidad 0.
-  // La condición correcta es <= 0. Si alguien la cambia a < 0, aparecerá un error lógico.
+  // Validación de cantidad (Reto docente)
   if (!Number.isFinite(quantity) || quantity <= 0) {
     errors.activityQuantity = "La cantidad debe ser un número mayor que cero.";
   }
@@ -32,7 +31,16 @@ function validateActivity(formData) {
   if (!date) errors.activityDate = "Seleccione una fecha.";
   if (date && isFutureDate(date)) errors.activityDate = "La fecha no puede ser futura.";
   if (responsible.length < 3) errors.activityResponsible = "El responsable debe tener mínimo 3 caracteres.";
-  if (note.length > 160) errors.activityNote = "La observación no puede superar 160 caracteres.";
+
+  // --- MEJORA SEMANAL INICIO: Observación obligatoria y detallada ---
+  if (!note || note.length === 0) {
+    errors.activityNote = "La observación es obligatoria para el registro.";
+  } else if (note.length < 10) {
+    errors.activityNote = "Describa mejor la actividad (mínimo 10 caracteres).";
+  } else if (note.length > 160) {
+    errors.activityNote = "La observación no puede superar los 160 caracteres.";
+  }
+  // --- MEJORA SEMANAL FIN ---
 
   if (type === "gasto" && unit && unit !== "pesos") {
     errors.activityUnit = "Los gastos deben registrarse en pesos.";

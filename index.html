@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AgroControl Lab Pro - Semana 9</title>
+  <title>AgroControl | Gestión Inteligente Rural</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
@@ -13,8 +13,8 @@
       <div class="brand">
         <span class="brand-icon">🌱</span>
         <div>
-          <strong>AgroControl Lab Pro</strong>
-          <small>Semana 9 · Pruebas, depuración y entrega incremental</small>
+          <strong>AgroControl Pro</strong>
+          <small>Sistema de Control y Monitoreo Agropecuario</small>
         </div>
       </div>
       <button id="btnToggleTheme" class="ghost-btn" type="button">Modo oscuro</button>
@@ -22,11 +22,11 @@
 
     <section class="hero-content">
       <div>
-        <p class="eyebrow">Proyecto base para VS Code + Live Server</p>
-        <h1>Gestión rural con validaciones, consola, inspector y depurador</h1>
+        <p class="eyebrow">Plataforma de Optimización de Recursos</p>
+        <h1>Gestión y Registro de Actividades en Tiempo Real</h1>
         <p>
-          Registra actividades productivas, valida datos, guarda información en el navegador,
-          analiza el sistema con DevTools y entrega una mejora funcional demostrable.
+          Administra tu producción, controla gastos y visualiza estadísticas avanzadas. 
+          Una herramienta diseñada para la eficiencia del campo con tecnología de vanguardia.
         </p>
         <div class="hero-actions">
           <a href="#registro" class="primary-btn">Registrar actividad</a>
@@ -62,9 +62,9 @@
     </section>
 
     <section class="grid-layout">
-      <article id="registro" class="panel form-panel">
+      <article id="registro" class="panel form-panel card">
         <div class="section-title">
-          <p class="eyebrow">Feature semanal</p>
+          <p class="eyebrow">Panel de Control</p>
           <h2>Registro de actividad productiva</h2>
           <p>Completa el formulario. El sistema validará los datos antes de guardar.</p>
         </div>
@@ -129,13 +129,13 @@
           </label>
 
           <div class="form-actions">
-            <button class="primary-btn" type="submit">Guardar actividad</button>
+            <button id="btn-save" class="primary-btn" type="submit">Guardar actividad</button>
             <button id="btnResetForm" class="secondary-btn" type="button">Limpiar formulario</button>
           </div>
         </form>
       </article>
 
-      <article class="panel chart-panel">
+      <article class="panel chart-panel card">
         <div class="section-title">
           <p class="eyebrow">Visualización</p>
           <h2>Actividades por tipo</h2>
@@ -145,12 +145,12 @@
       </article>
     </section>
 
-    <section class="panel">
+    <section class="panel card">
       <div class="section-title row-title">
         <div>
-          <p class="eyebrow">Consulta y pruebas</p>
+          <p class="eyebrow">Consulta y datos</p>
           <h2>Registros guardados</h2>
-          <p>Usa filtros y búsqueda para comprobar la integración del proyecto.</p>
+          <p>Usa filtros y búsqueda para gestionar la información del sistema.</p>
         </div>
         <div class="toolbar">
           <button id="btnLoadSeed" class="secondary-btn" type="button">Cargar datos de prueba</button>
@@ -189,12 +189,12 @@
       <p id="emptyState" class="empty-state">No hay registros todavía. Carga datos de prueba o registra una actividad.</p>
     </section>
 
-    <section id="diagnostico" class="panel diagnostic-panel">
+    <section id="diagnostico" class="panel diagnostic-panel card">
       <div class="section-title">
-        <p class="eyebrow">DevTools</p>
+        <p class="eyebrow">Análisis de Sistema</p>
         <h2>Centro de diagnóstico</h2>
         <p>
-          Usa estos botones para generar mensajes en consola, revisar datos y practicar depuración controlada.
+          Monitoreo técnico de variables y depuración controlada de procesos.
         </p>
       </div>
 
@@ -213,7 +213,7 @@
   </main>
 
   <footer>
-    <p>AgroControl Lab Pro · Proyecto educativo para pruebas, depuración y entrega incremental.</p>
+    <p>AgroControl Pro · Solución Tecnológica para el Desarrollo Rural © 2026</p>
   </footer>
 
   <script src="js/config.js"></script>

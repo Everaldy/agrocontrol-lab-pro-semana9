@@ -163,3 +163,85 @@ tr:last-child td { border-bottom: 0; }
 
 footer { padding: 24px clamp(18px, 4vw, 64px) 40px; color: var(--muted); text-align: center; }
 .hidden { display: none !important; }
+
+/* ============================================================
+   EFECTO IA Y ESPEJO UNIVERSAL (MODO CLARO Y OSCURO)
+   ============================================================ */
+
+/* 1. Base de las tarjetas: Usamos var(--panel) para que cambie solo */
+.card, .metric-card {
+    background: var(--panel); 
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+/* 2. Comportamiento al rozar (Hover) */
+.card:hover, .metric-card:hover {
+    transform: translateY(-12px) scale(1.01);
+    /* En modo oscuro var(--primary) es verde claro, se verá como neón */
+    border-color: var(--primary); 
+    
+    /* Aura de luz que se adapta al modo oscuro/claro */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 
+                0 0 15px var(--primary);
+}
+
+/* 3. Efecto Espejo (Destello de luz) */
+.card::before, .metric-card::before, #btn-save::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 65%;
+    height: 100%;
+    /* El brillo es semi-transparente para que funcione sobre cualquier color */
+    background: linear-gradient(
+        to right, 
+        transparent, 
+        rgba(255, 255, 255, 0.05), 
+        rgba(255, 255, 255, 0.3), 
+        transparent
+    );
+    transform: skewX(-30deg);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.card:hover::before, .metric-card:hover::before, #btn-save:hover::before {
+    left: 150%;
+    transition: all 0.8s ease-in-out;
+}
+
+/* 4. Estilo de Inputs (Corregido para modo oscuro) */
+input, select, textarea {
+    background: var(--panel) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 14px !important;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 4px rgba(103, 197, 135, 0.2) !important;
+}
+
+/* 5. Botón de Guardar con efecto IA */
+#btn-save {
+    position: relative;
+    overflow: hidden;
+    background: var(--primary);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#btn-save:hover {
+    box-shadow: 0 0 25px var(--primary);
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}

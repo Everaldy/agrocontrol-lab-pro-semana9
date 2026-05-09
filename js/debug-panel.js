@@ -72,5 +72,5 @@ function simulateControlledError() {
 
   // Error intencional: esta función no existe.
   // Actividad del estudiante: comentar esta línea o cambiarla por systemCheck().
-  funcionQueNoExisteParaPracticarDebugger();
+  // funcionQueNoExisteParaPracticarDebugger();
 }
